@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  font-family: 'Barlow', sans-serif;
+  font-family: 'Fraunces', serif;
+*/
+
+:root {
+  /* Primary */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desat-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral */
+  --very-dark-desat-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+
+  section.splash {
+    height: 538px;
+  }
+
+  section.splash > picture > img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  section.splash > nav {
+    padding: 24px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section.splash > nav > div#menu {
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - calc(24px * 2));
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  section.splash > nav > button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  section.splash > nav > button:not(:hover) + div#menu {
+    display: none;
+    opacity: 0;
+  }
+
+  section.splash > nav > button:hover + div#menu,
+  section.splash > nav > button:focus + div#menu,
+  section.splash > nav > button:focus-within + div#menu,
+  section.splash > nav > button:focus-visible + div#menu {
+    display: flex;
+    opacity: 1;
+  }
+
+  div#menu > a {
+    text-decoration: none;
+    padding: 24px;
+  }
+
+  section.splash > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.splash > header > h1 {
+    color: var(--white);
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin: 62px 0;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+}
+
+@media screen and (min-width: 376px) {
+
+  section.splash {
+    height: 100vh;
+  }
+
+  section.splash > picture > img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  section.splash > nav {
+    display: flex;
+  }
+
+  section.splash > nav > button {
+    display: none;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+}
