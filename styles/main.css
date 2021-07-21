@@ -30,7 +30,7 @@ html, body {
   padding: 0;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
 
   section.splash {
     height: 538px;
@@ -112,7 +112,7 @@ html, body {
 
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 426px) {
 
   section.splash {
     height: 100vh;
