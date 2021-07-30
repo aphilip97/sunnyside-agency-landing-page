@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-/*
-  font-family: 'Barlow', sans-serif;
-  font-family: 'Fraunces', serif;
-*/
-
 :root {
   /* Primary */
   --soft-red: hsl(7, 99%, 70%);
@@ -23,6 +18,16 @@
   --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
+
+  /* My own extra colors for extra things */
+  --orange: hsla(43, 100%, 50%);
+
+  /* Fonts */
+  --headings: 'Fraunces', serif;
+  --body: 'Barlow', sans-serif;
+
+  /* Transition timings and easing curves */
+  --point_3: 0.3s ease-in-out;
 }
 
 html, body {
@@ -32,68 +37,104 @@ html, body {
 
 @media screen and (max-width: 425px) {
 
-  section.splash {
-    height: 538px;
+  section#splash {
+    margin-bottom: -4px;
   }
 
-  section.splash > picture > img {
+  section#splash > nav {
     position: absolute;
-    z-index: -1;
-  }
-
-  section.splash > nav {
+    width: 100%;
     padding: 24px;
-    position: relative;
     display: flex;
     justify-content: space-between;
   }
 
-  section.splash > nav > div#menu {
-    position: absolute;
-    top: 230%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - calc(24px * 2));
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-  }
-
-  section.splash > nav > button {
+  section#splash > nav > button {
     background: none;
     border: none;
     padding: 0;
   }
 
-  section.splash > nav > button:not(:hover) + div#menu {
-    display: none;
-    opacity: 0;
+  section#splash > nav > div#menu[open] + button {
+    opacity: 0.5;
   }
 
-  section.splash > nav > button:hover + div#menu,
-  section.splash > nav > button:focus + div#menu,
-  section.splash > nav > button:focus-within + div#menu,
-  section.splash > nav > button:focus-visible + div#menu {
+  div#menu {
+    position: absolute;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - calc(24px * 2));
+    padding: 24px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  div#menu[open] {
+    pointer-events: all;
     opacity: 1;
   }
 
-  div#menu > a {
-    text-decoration: none;
-    padding: 24px;
+  div#menu::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-bottom: 24px solid white;
+    position: absolute;
+    top: -24px;
+    right: 0px;
   }
 
-  section.splash > header {
+  div#menu > a {
+    color: var(--grayish-blue);
+    margin: 16px;
+    font-family: var(--body);
+    font-size: 18px;
+    text-decoration: none;
+    transition:
+      color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+  }
+
+  div#menu > a:focus,
+  div#menu > a:hover {
+    color: hsl(0, 0%, 0%);
+  }
+
+  div#menu > a:last-of-type {
+    background-color: var(--yellow);
+    color: hsl(0, 0%, 0%);
+    padding: 16px 24px;
+    border-radius: calc(52px / 2);
+    font-family: var(--headings);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  div#menu > a:last-of-type:focus,
+  div#menu > a:last-of-type:hover {
+    background-color: var(--orange);
+  }
+
+  section#splash > header {
+    position: absolute;
+    top: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  section.splash > header > h1 {
+  section#splash > header > h1 {
     color: var(--white);
-    font-family: 'Fraunces', serif;
+    font-family: var(--headings);
     font-size: 2.4rem;
     text-align: center;
     text-transform: uppercase;

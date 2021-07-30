@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,36 +30,40 @@
     <link rel="preload" href="./images/icon-twitter.svg" as="image" type="image/svg+xml">
     <link rel="preload" href="./images/icon-pinterest.svg" as="image" type="image/svg+xml">
     <link rel="stylesheet" href="styles/main.css">
+    <script async src="./js/main.js"></script>
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
 
   <body>
 
-    <section class="splash">
-
-      <picture aria-hidden="true">
-        <source media="(max-width: 425px)" srcset="./images/mobile/image-header.jpg">
-        <source media="(min-width: 426px)" srcset="./images/desktop/image-header.jpg">
-        <img width="100%" src="./images/mobile/image-header.jpg" alt="Splash screen image of an orange on a sky blue background.">
-      </picture>
+    <section id="splash">
 
       <nav>
         <img src="./images/logo.svg" alt="Sunnyside Agency Logo">
-        <button aria-label="Open the menu">
-          <img src="./images/icon-hamburger.svg" alt="Hamburger Icon">
-        </button>
         <div id="menu">
           <a href="#about" >About</a>
           <a href="#services" >Services</a>
           <a href="#projects" >Projects</a>
           <a href="#" >Contact</a>
         </div>
+        <button data-js-menu-toggle tabindex="1" aria-label="Open the menu">
+          <img src="./images/icon-hamburger.svg" alt="Hamburger Icon">
+        </button>
       </nav>
 
       <header>
         <h1>We are creatives</h1>
         <img src="./images/icon-arrow-down.svg" alt="Arrow pointing down">
       </header>
+
+      <img
+        src="./images/mobile/image-header.jpg"
+        alt="Splash screen image of an orange on a sky blue background."
+        srcset="
+          ./images/mobile/image-header.jpg 750w,
+          ./images/desktop/image-header.jpg 2880w
+        "
+      >
 
     </section>
 
