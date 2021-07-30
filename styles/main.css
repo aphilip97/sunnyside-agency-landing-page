@@ -21,6 +21,7 @@
 
   /* My own extra colors for extra things */
   --orange: hsla(43, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
 
   /* Fonts */
   --headings: 'Fraunces', serif;
@@ -69,7 +70,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     z-index: 1;
     display: flex;
     opacity: 0;
@@ -106,12 +107,12 @@ html, body {
 
   div#menu > a:focus,
   div#menu > a:hover {
-    color: hsl(0, 0%, 0%);
+    color: var(--black);
   }
 
   div#menu > a:last-of-type {
     background-color: var(--yellow);
-    color: hsl(0, 0%, 0%);
+    color: var(--black);
     padding: 16px 24px;
     border-radius: calc(52px / 2);
     font-family: var(--headings);
@@ -155,21 +156,76 @@ html, body {
 
 @media screen and (min-width: 426px) {
 
-  section.splash {
-    height: 100vh;
-  }
-
-  section.splash > picture > img {
+  section#splash > nav {
     position: absolute;
-    z-index: -1;
-  }
-
-  section.splash > nav {
+    width: 100%;
+    padding: 36px 39px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  section.splash > nav > button {
+  section#splash > nav > img {
+    height: 33px;
+  }
+
+  section#splash > nav > button {
     display: none;
+  }
+
+  div#menu {
+    width: 467px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 12px;
+  }
+
+  div#menu > a {
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  div#menu > a:last-child {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--headings);
+    font-weight: 600;
+    padding: 19px 32px;
+    border-radius: 28px;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition:
+      background-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+  }
+
+  div#menu > a:last-child:hover,
+  div#menu > a:last-child:focus {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    color: var(--white);
+  }
+
+  section#splash > header {
+    position: absolute;
+    top: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  section#splash > header > h1 {
+    color: var(--white);
+    font-family: var(--headings);
+    font-size: 56px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    margin: 32px 0 93px 0;
   }
 
   .attribution {
