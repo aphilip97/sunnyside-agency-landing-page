@@ -229,6 +229,10 @@ html, body {
     margin: 32px 0 93px 0;
   }
 
+  section#splash > img {
+    margin-bottom: -4px;
+  }
+
   .attribution {
     font-size: 11px;
     text-align: center;
