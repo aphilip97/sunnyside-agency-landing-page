@@ -184,7 +184,7 @@ html, body {
     position: relative;
   }
 
-  section#about a:before {
+  section#about a::before {
     content: ' ';
     display: inline-block;
     width: 137px;
@@ -196,14 +196,22 @@ html, body {
     border-radius: 5px;
     z-index: -1;
     opacity: 0.25;
+    transition: opacity 0.3s ease-in-out;
   }
 
-  section#about > div:first-of-type > a:before {
+  section#about > div:first-of-type > a::before {
     background-color: var(--yellow);
   }
 
-  section#about > div:last-of-type > a:before {
+  section#about > div:last-of-type > a::before {
     background-color: var(--soft-red);
+  }
+
+  section#about > div:first-of-type > a:hover::before,
+  section#about > div:first-of-type > a:focus::before,
+  section#about > div:last-of-type > a:hover::before,
+  section#about > div:last-of-type > a:focus::before {
+    opacity: 1;
   }
 
   .attribution {
