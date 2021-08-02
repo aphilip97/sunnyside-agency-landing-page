@@ -74,11 +74,13 @@ html, body {
     z-index: 1;
     display: flex;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
   }
 
   div#menu[open] {
+    visibility: visible;
     pointer-events: all;
     opacity: 1;
   }
