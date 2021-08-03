@@ -227,6 +227,12 @@ html, body {
 
 @media screen and (min-width: 426px) {
 
+  body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   section#splash > nav {
     position: absolute;
     width: 100%;
@@ -258,7 +264,7 @@ html, body {
     font-size: 18px;
     text-decoration: none;
   }
-  
+
   div#menu > a:last-child {
     background-color: var(--white);
     color: var(--black);
@@ -301,6 +307,121 @@ html, body {
 
   section#splash > img {
     margin-bottom: -4px;
+  }
+
+  section#about {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section#about > div:first-of-type {
+    order: 1;
+  }
+
+  section#about > img:first-of-type {
+    order: 2;
+  }
+
+  section#about > img:last-of-type {
+    order: 3;
+  }
+
+  section#about > div:last-of-type {
+    order: 4;
+  }
+
+  section#about > * {
+    width: 50vw;
+  }
+
+  section#about > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 445px
+  }
+
+  section#about > div {
+    margin: 0 auto;
+  }
+
+  @media only screen
+    and (min-width: 1440px)
+    and (max-width: 1440px)
+  {
+
+    section#about > div:first-of-type {
+      margin: 0 110px 0 auto;
+    }
+
+    section#about > div:last-of-type {
+      margin: 0 auto 0 110px;
+    }
+  }
+
+  section#about h2 {
+    color: var(--very-dark-desat-blue);
+    font-family: var(--headings);
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -0.29px;
+    margin: 0;
+  }
+
+  section#about p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--body);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.13px;
+    margin: 32px 0 40px 0;
+  }
+
+  section#about a {
+    position: relative;
+    align-self: flex-start;
+    color: var(--very-dark-desat-blue);
+    font-family: var(--headings);
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 0 0 0 8px;
+  }
+
+  section#about a::before {
+    content: ' ';
+    display: inline-block;
+    width: 137px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0.25;
+    transition: opacity 0.3s ease-in-out;
+    margin: 0 0 0 2px;
+  }
+
+  section#about > div:first-of-type > a::before {
+    background-color: var(--yellow);
+  }
+
+  section#about > div:last-of-type > a::before {
+    background-color: var(--soft-red);
+  }
+
+  section#about > div:first-of-type > a:hover::before,
+  section#about > div:first-of-type > a:focus::before,
+  section#about > div:last-of-type > a:hover::before,
+  section#about > div:last-of-type > a:focus::before {
+    opacity: 1;
   }
 
   .attribution {
