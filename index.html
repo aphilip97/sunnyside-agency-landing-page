@@ -103,24 +103,34 @@
 
     <section id="services">
 
-      <div>
-        <picture aria-hidden="true">
-          <source media="(max-width: 425px)" srcset="./images/mobile/image-graphic-design.jpg">
-          <source media="(min-width: 426px)" srcset="./images/desktop/image-graphic-design.jpg">
-          <img width="100%" src="./images/mobile/image-graphic-design.jpg" alt="Image of a pair of cherries on a teal background.">
-        </picture>
-        <h3>Graphic design</h3>
-        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+      <div class="img-content-group">
+        <img
+          src="./images/mobile/image-graphic-design.jpg"
+          alt="Image of a pair of cherries on a teal background."
+          srcset="
+            ./images/mobile/image-graphic-design.jpg 750w,
+            ./images/desktop/image-graphic-design.jpg 720w
+          "
+        >
+        <div class="content graphic-design">
+          <h2>Graphic Design</h2>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
       </div>
 
-      <div>
-        <picture aria-hidden="true">
-          <source media="(max-width: 425px)" srcset="./images/mobile/image-photography.jpg">
-          <source media="(min-width: 426px)" srcset="./images/desktop/image-photography.jpg">
-          <img width="100%" src="./images/mobile/image-photography.jpg" alt="Image of an orange on a sky blue background.">
-        </picture>
-        <h3>Photography</h3>
-        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+      <div class="img-content-group">
+        <img
+          src="./images/mobile/image-photography.jpg"
+          alt="Image of an orange on a sky blue background."
+          srcset="
+            ./images/mobile/image-photography.jpg 750w,
+            ./images/desktop/image-photography.jpg 720w
+          "
+        >
+        <div class="content photography">
+          <h2>Photography</h2>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
       </div>
 
     </section>

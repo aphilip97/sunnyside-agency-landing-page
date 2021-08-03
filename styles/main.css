@@ -8,8 +8,9 @@
   /* Primary */
   --soft-red: #fe7766;
   --yellow: #fad400;
-  --dark-desat-cyan: #25564b;
+  --dark-desat-cyan: #24554a;
   --dark-blue: #19536b;
+  --darker-blue: #052c3b;
   --dark-moderate-cyan: #458c7e;
 
   /* Neutral */
@@ -212,6 +213,52 @@ html, body {
   section#about > div:last-of-type > a:hover::before,
   section#about > div:last-of-type > a:focus::before {
     opacity: 1;
+  }
+
+  section#services > div.img-content-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    position: relative;
+  }
+
+  section#services h2 {
+    font-family: var(--headings);
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: -0.2px;
+    margin-bottom: 30px;
+  }
+
+  section#services p {
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.11px;
+  }
+
+  section#services div.content {
+    position: absolute;
+  }
+
+  section#services div.content {
+    padding: 0px 18px 43px 18px;
+  }
+
+  section#services div.content.graphic-design {
+    color: var(--dark-desat-cyan);
+  }
+
+  section#services div.content.photography > h2 {
+    color: var(--darker-blue);
+    opacity: 0.75;
+  }
+
+  section#services div.content.photography > p {
+    color: var(--dark-blue);
   }
 
   .attribution {
