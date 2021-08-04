@@ -16,9 +16,9 @@
 
   /* Neutral */
   --very-dark-desat-blue: #24303e;
-  --very-dark-grayish-blue: #5a636c;
+  --very-dark-grayish-blue: #5b636d;
   --dark-grayish-blue: #808397;
-  --grayish-blue: #a7abae;
+  --grayish-blue: #a7aaad;
   --white: #ffffff;
 
   /* My own extra colors for extra things */
@@ -265,6 +265,70 @@ html, body {
 
   section#services div.content.photography > p {
     color: var(--dark-blue);
+  }
+
+  section#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 66px 24px 22px 24px;
+  }
+
+  section#projects > h2 {
+    color: var(--grayish-blue);
+    font-family: var(--headings);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 66px 0;
+  }
+
+  section#projects > div.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 64px 0;
+  }
+
+  section#projects > div.testimonial > img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 0 0 14px 0;
+  }
+
+  section#projects > div.testimonial > p {
+    color: var(--very-dark-grayish-blue);
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.13px;
+    margin: 18px 0 35px 0;
+  }
+
+  section#projects > div.testimonial > strong {
+    color: var(--very-dark-desat-blue);
+    font-family: var(--headings);
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.13px;
+    margin: 0px 0 10px 0;
+  }
+
+  section#projects > div.testimonial > span {
+    color: var(--grayish-blue);
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.1px;
   }
 
   .attribution {
