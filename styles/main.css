@@ -12,7 +12,7 @@
   --light-desat-cyan: #3e7467;
   --dark-blue: #19536b;
   --darker-blue: #052c3b;
-  --dark-moderate-cyan: #458c7e;
+  --dark-moderate-cyan: #458d7e;
 
   /* Neutral */
   --very-dark-desat-blue: #24303e;
@@ -22,6 +22,7 @@
   --white: #ffffff;
 
   /* My own extra colors for extra things */
+  --green: #2c7566;
   --orange: #ffb700;
   --black: #000000;
 
@@ -331,13 +332,89 @@ html, body {
     letter-spacing: -0.1px;
   }
 
+  div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.gallery img {
+    display: block;
+    width: 50vw;
+  }
+
+  footer {
+    background-color: #90d4c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 68px 0 0 0;
+    row-gap: 46px;
+  }
+
+  footer > svg {
+    fill: var(--green);
+    transform: scale( calc( 170 / 124 ) );
+  }
+
+  footer > div.footer-links {
+    display: flex;
+    column-gap: 57px;
+    margin: 0px 0 41px 0;
+  }
+
+  footer > div.footer-links > a {
+    color: var(--dark-moderate-cyan);
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.13px;
+    text-decoration: none;
+  }
+
+  footer > div.footer-links > a:hover,
+  footer > div.footer-links > a:focus {
+    color: var(--white);
+  }
+
+  footer > div.footer-socials {
+    display: flex;
+    column-gap: 28px;
+    align-items: center;
+  }
+
+  footer > div.footer-socials > a {
+    text-decoration: none;
+  }
+
+  footer > div.footer-socials > a > svg {
+    fill: var(--green);
+  }
+
+  footer > div.footer-socials > a:hover > svg,
+  footer > div.footer-socials > a:focus > svg {
+    fill: var(--white);
+  }
+
   .attribution {
+    color: var(--dark-moderate-cyan);
+    font-family: var(--body);
     font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: -0.13px;
     text-align: center;
+    margin: 0 0 12px 0;
   }
 
   .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .attribution a:hover,
+  .attribution a:focus {
+    color: var(--white);
   }
 
 }
