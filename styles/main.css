@@ -436,7 +436,7 @@ html, body {
   section#splash > nav {
     position: absolute;
     width: 100%;
-    padding: 36px 39px;
+    padding: 35px 39px 36px 39px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -451,10 +451,11 @@ html, body {
   }
 
   div#menu {
-    width: 467px;
+    /* width: 467px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 47px;
     margin-right: 12px;
   }
 
@@ -462,6 +463,9 @@ html, body {
     color: var(--white);
     font-family: var(--body);
     font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.13px;
     text-decoration: none;
   }
 
@@ -469,10 +473,12 @@ html, body {
     background-color: var(--white);
     color: var(--black);
     font-family: var(--headings);
-    font-weight: 600;
-    padding: 19px 32px;
-    border-radius: 28px;
     font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.11px;
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 28px;
     text-transform: uppercase;
     transition:
       background-color 0.3s ease-in-out,
