@@ -56,27 +56,30 @@
         <img src="./images/icon-arrow-down.svg" alt="Arrow pointing down">
       </header>
 
-      <img
-        src="./images/mobile/image-header.jpg"
-        alt="Splash screen image of an orange on a sky blue background."
-        srcset="
-          ./images/mobile/image-header.jpg 750w,
-          ./images/desktop/image-header.jpg 2880w
-        "
-      >
+      <picture>
+        <source
+          media="(max-width: 425px)"
+          srcset="./images/mobile/image-header.jpg"
+        >
+        <source
+          media="(min-width: 426px)"
+          srcset="./images/desktop/image-header.jpg"
+        >
+        <img
+          src="./images/mobile/image-header.jpg"
+          alt="Splash screen image of an orange on a sky blue background."
+        >
+      </picture>
 
     </section>
 
     <section id="about">
 
-      <img
-        src="./images/mobile/image-transform.jpg"
-        alt="Image of an egg on a yellow background."
-        srcset="
-          ./images/mobile/image-transform.jpg 750w,
-          ./images/desktop/image-transform.jpg 720w
-        "
-      >
+      <picture>
+        <source media="(max-width: 425px)" srcset="./images/mobile/image-transform.jpg">
+        <source media="(min-width: 426px)" srcset="./images/desktop/image-transform.jpg">
+        <img src="./images/mobile/image-transform.jpg" alt="Image of an egg on a yellow background.">
+      </picture>
 
       <div>
         <h2>Transform your brand</h2>
@@ -84,14 +87,11 @@
         <a href="#">Learn more</a>
       </div>
 
-      <img
-        src="./images/mobile/image-stand-out.jpg"
-        alt="3D rendering of a opaque pink champagne glass on a pink background."
-        srcset="
-          ./images/mobile/image-stand-out.jpg 750w,
-          ./images/desktop/image-stand-out.jpg 720w
-        "
-      >
+      <picture>
+        <source media="(max-width: 425px)" srcset="./images/mobile/image-stand-out.jpg">
+        <source media="(min-width: 426px)" srcset="./images/desktop/image-stand-out.jpg">
+        <img src="./images/mobile/image-stand-out.jpg" alt="Image of an opaque pink champagne glass on a pink background.">
+      </picture>
 
       <div>
         <h2>Stand out to the right audience</h2>
