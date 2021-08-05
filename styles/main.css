@@ -367,6 +367,7 @@ html, body {
     line-height: 25px;
     letter-spacing: -0.13px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
   }
 
   footer > div.footer-links > a:hover,
@@ -386,6 +387,7 @@ html, body {
 
   footer > div.footer-socials > a > svg {
     fill: var(--green);
+    transition: fill 0.3s ease-in-out;
   }
 
   footer > div.footer-socials > a:hover > svg,
@@ -456,6 +458,12 @@ html, body {
     line-height: 25px;
     letter-spacing: -0.13px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  div#menu > a:hover,
+  div#menu > a:focus {
+    color: var(--black);
   }
 
   div#menu > a:last-child {
@@ -771,6 +779,7 @@ html, body {
     line-height: 25px;
     letter-spacing: -0.13px;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
   }
 
   footer > div.footer-links > a:hover,
@@ -790,6 +799,7 @@ html, body {
 
   footer > div.footer-socials > a > svg {
     fill: var(--green);
+    transition: fill 0.3s ease-in-out;
   }
 
   footer > div.footer-socials > a:hover > svg,
