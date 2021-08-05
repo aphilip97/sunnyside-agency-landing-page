@@ -49,7 +49,7 @@ html, body {
 
 @media screen and (max-width: 425px) {
 
-  section#splash > nav {
+  nav.flex {
     position: absolute;
     width: 100%;
     padding: 32px 24px 24px 24px;
@@ -57,13 +57,13 @@ html, body {
     justify-content: space-between;
   }
 
-  section#splash > nav > button {
+  nav.flex > button {
     background: none;
     border: none;
     padding: 0;
   }
 
-  section#splash > nav > div#menu[open] + button {
+  nav.flex > div#menu[open] + button {
     opacity: 0.5;
   }
 
@@ -136,12 +136,12 @@ html, body {
     background-color: var(--orange);
   }
 
-  section#splash > header {
+  header {
     position: absolute;
     top: 72px;
   }
 
-  section#splash > header > h1 {
+  header > h1 {
     color: var(--white);
     font-family: var(--headings);
     font-size: 2.4rem;
@@ -152,7 +152,7 @@ html, body {
     margin: 72px 0 52px 0;
   }
 
-  section#splash > picture > img {
+  picture > img {
     display: block;
     width: 100vw;
   }
@@ -424,7 +424,7 @@ html, body {
     scrollbar-width: none;
   }
 
-  section#splash > nav {
+  nav.flex {
     position: absolute;
     width: 100%;
     padding: 35px 39px 36px 39px;
@@ -432,11 +432,11 @@ html, body {
     justify-content: space-between;
   }
 
-  section#splash > nav > img {
+  nav.flex > img {
     height: 33px;
   }
 
-  section#splash > nav > button {
+  nav.flex > button {
     display: none;
   }
 
@@ -480,13 +480,13 @@ html, body {
     color: var(--white);
   }
 
-  section#splash > header {
+  header {
     position: absolute;
     top: 164px;
     width: 100%;
   }
 
-  section#splash > header > h1 {
+  header > h1 {
     color: var(--white);
     font-family: var(--headings);
     font-size: 56px;
@@ -497,7 +497,7 @@ html, body {
     margin: 32px 0 93px 0;
   }
 
-  section#splash > picture > img {
+  picture > img {
     width: 100vw;
     display: block;
   }

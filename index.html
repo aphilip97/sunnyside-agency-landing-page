@@ -32,42 +32,38 @@
 
   <body>
 
-    <section id="splash">
+    <header class="flex">
+      <h1>We are creatives</h1>
+      <img src="./images/icon-arrow-down.svg" alt="Arrow pointing down">
+    </header>
 
-      <nav class="flex">
-        <img src="./images/logo.svg" alt="Sunnyside Agency Logo">
-        <div id="menu" class="flex">
-          <a href="#about" >About</a>
-          <a href="#services" >Services</a>
-          <a href="#projects" >Projects</a>
-          <a href="#" >Contact</a>
-        </div>
-        <button data-js-menu-toggle tabindex="1" aria-label="Open the menu">
-          <img src="./images/icon-hamburger.svg" alt="Hamburger Icon">
-        </button>
-      </nav>
+    <nav class="flex">
+      <img src="./images/logo.svg" alt="Sunnyside Agency Logo">
+      <div id="menu" class="flex">
+        <a href="#about" >About</a>
+        <a href="#services" >Services</a>
+        <a href="#projects" >Projects</a>
+        <a href="#" >Contact</a>
+      </div>
+      <button data-js-menu-toggle tabindex="1" aria-label="Open the menu">
+        <img src="./images/icon-hamburger.svg" alt="Hamburger Icon">
+      </button>
+    </nav>
 
-      <header class="flex">
-        <h1>We are creatives</h1>
-        <img src="./images/icon-arrow-down.svg" alt="Arrow pointing down">
-      </header>
-
-      <picture>
-        <source
-          media="(max-width: 425px)"
-          srcset="./images/mobile/image-header.jpg"
-        >
-        <source
-          media="(min-width: 426px)"
-          srcset="./images/desktop/image-header.jpg"
-        >
-        <img
-          src="./images/mobile/image-header.jpg"
-          alt="Splash screen image of an orange on a sky blue background."
-        >
-      </picture>
-
-    </section>
+    <picture>
+      <source
+        media="(max-width: 425px)"
+        srcset="./images/mobile/image-header.jpg"
+      >
+      <source
+        media="(min-width: 426px)"
+        srcset="./images/desktop/image-header.jpg"
+      >
+      <img
+        src="./images/mobile/image-header.jpg"
+        alt="Splash screen image of an orange on a sky blue background."
+      >
+    </picture>
 
     <section id="about">
 
