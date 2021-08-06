@@ -424,10 +424,13 @@ body {
 
 @media screen and (min-width: 426px) {
 
+  html {
+    scrollbar-width: none;
+  }
+
   body::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 
   nav.flex {
@@ -443,7 +446,8 @@ body {
   }
 
   nav.flex > button {
-    display: none;
+    visibility: hidden;
+    position: absolute;
   }
 
   div#menu {
